@@ -27,7 +27,11 @@
                 "tests",
                 "tests/Fake"
             ]
-        }
+        },
+        "classmap": [
+          "vendor/yiisoft/yii/framework/base/",
+          "vendor/yiisoft/yii/framework/web/"
+        ]
     },
     "scripts": {
         "setup": "php bin/setup.php",
