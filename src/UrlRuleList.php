@@ -37,9 +37,12 @@ final class UrlRuleList
         }
 
         $parent = $reflectionClass->getParentClass();
+        // @codeCoverageIgnoreStart
         if (! $parent) {
             throw new RuntimeException("{$reflectionClass->getName()} does not have _rules and parent class");
         }
+
+        // @codeCoverageIgnoreEnd
 
         return $this->getRulesProperty($parent);
     }

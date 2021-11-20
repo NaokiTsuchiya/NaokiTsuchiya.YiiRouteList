@@ -62,4 +62,26 @@ class YiiRouteListTest extends TestCase
             $this->assertInstanceOf(Route::class, $item);
         }
     }
+
+    public function testInvalidAction(): void
+    {
+        $config = [
+            'basePath' => dirname(__DIR__) . '/tests/Fake/protected',
+            'components' => [
+                'urlManager' => [
+                    'urlFormat' => 'path',
+                    'rules' => [
+                        '/pattern' => ['pattern/invalid'],
+                    ],
+                ],
+            ],
+        ];
+
+        $list = ($this->yiiRouteList)(new CWebApplication($config));
+        $actual = $list->current();
+        $this->assertInstanceOf(Route::class, $actual);
+        $this->assertNull($actual->action);
+        $list->next();
+        $this->assertFalse($list->valid());
+    }
 }

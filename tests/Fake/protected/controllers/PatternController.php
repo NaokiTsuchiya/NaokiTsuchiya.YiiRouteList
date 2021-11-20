@@ -17,6 +17,9 @@ class PatternController extends CController
     /** @return array<string, string> */
     public function actions(): array
     {
-        return ['put' => 'application.controllers.pattern.PutAction'];
+        return [
+            'put' => 'application.controllers.pattern.PutAction',
+            'invalid' => 'application.controllers.pattern.InvalidAction',
+        ];
     }
 }
