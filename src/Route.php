@@ -11,14 +11,9 @@ use CUrlRule;
 /** @psalm-immutable */
 final class Route
 {
-    /** @var CUrlRule */
-    public $rule;
-
-    /** @var CController */
-    public $controller;
-
-    /** @var CAction|null */
-    public $action;
+    public CUrlRule $rule;
+    public CController $controller;
+    public ?CAction $action;
 
     public function __construct(
         CUrlRule $rule,

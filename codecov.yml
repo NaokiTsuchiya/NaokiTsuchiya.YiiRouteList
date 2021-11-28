@@ -1,6 +1,7 @@
 codecov:
   notify:
-    require_ci_to_pass: yes
+    after_n_builds: 4
+  require_ci_to_pass: true
 
 coverage:
   status:
@@ -10,5 +11,3 @@ coverage:
     patch:
       default:
         target: 100%
-
-comment: false
