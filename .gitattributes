@@ -2,9 +2,12 @@
 
 # Exclude build/test files from archive
 /tests            export-ignore
+/vendor-bin       export-ignore
 /.editorconfig    export-ignore
 /.gitattributes   export-ignore
 /.gitignore       export-ignore
+/.github          export-ignore
+/.scrutinizer.yml export-ignore
 /codecov.yml      export-ignore
 /phpcs.xml        export-ignore
 /phpmd.xml        export-ignore
