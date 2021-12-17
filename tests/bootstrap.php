@@ -7,5 +7,3 @@ define('YII_ENABLE_ERROR_HANDLER', false);
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../vendor/yiisoft/yii/framework/yii.php';
-
-spl_autoload_unregister([YiiBase::class, 'autoload']);
