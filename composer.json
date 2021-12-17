@@ -29,8 +29,11 @@
             ]
         },
         "classmap": [
-          "vendor/yiisoft/yii/framework/base/",
-          "vendor/yiisoft/yii/framework/web/"
+          "vendor/yiisoft/yii/framework/web",
+          "vendor/yiisoft/yii/framework/base",
+          "vendor/yiisoft/yii/framework/collections/CMap.php",
+          "vendor/yiisoft/yii/framework/i18n/CLocale.php",
+          "vendor/yiisoft/yii/framework/i18n/CMessageSource.php"
         ]
     },
     "scripts": {
@@ -48,7 +51,7 @@
         ],
         "sa": [
             "./vendor/bin/phpstan analyse -c phpstan.neon",
-            "psalm --show-info=true"
+            "./vendor/bin/psalm --show-info=true"
         ],
         "tests": [
             "@cs",
