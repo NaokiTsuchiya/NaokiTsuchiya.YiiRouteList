@@ -33,7 +33,8 @@
           "vendor/yiisoft/yii/framework/base",
           "vendor/yiisoft/yii/framework/collections/CMap.php",
           "vendor/yiisoft/yii/framework/i18n/CLocale.php",
-          "vendor/yiisoft/yii/framework/i18n/CMessageSource.php"
+          "vendor/yiisoft/yii/framework/i18n/CMessageSource.php",
+          "vendor/yiisoft/yii/framework/vendors/htmlpurifier/HTMLPurifier.standalone.php"
         ]
     },
     "scripts": {
