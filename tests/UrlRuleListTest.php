@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace NaokiTsuchiya\YiiRouteList;
 
-use CUrlManager;
 use CUrlRule;
 use CWebApplication;
 use PHPUnit\Framework\TestCase;
@@ -25,6 +24,7 @@ final class UrlRuleListTest extends TestCase
 
     protected function tearDown(): void
     {
+        /** @psalm-suppress NullArgument */
         Yii::setApplication(null); // @phpstan-ignore-line
     }
 
@@ -44,7 +44,6 @@ final class UrlRuleListTest extends TestCase
             ]
         );
         $urlManager = $app->getUrlManager();
-        assert($urlManager instanceof CUrlManager);
         $rules = ($this->urlRuleList)($urlManager);
 
         foreach ($rules as $rule) {
