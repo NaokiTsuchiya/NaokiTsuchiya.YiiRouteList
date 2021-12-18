@@ -22,6 +22,7 @@ final class DefaultRuleListTest extends TestCase
 
     protected function tearDown(): void
     {
+        /** @psalm-suppress NullArgument */
         Yii::setApplication(null); // @phpstan-ignore-line
     }
 
