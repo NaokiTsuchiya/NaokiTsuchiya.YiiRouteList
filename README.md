@@ -6,14 +6,35 @@
 
 # naoki-tsuchiya/yii-route-list
 
+It gets a list of route from each of rules of UrlManager in Yii Framework 1.1.
+
 ## Installation
 
-    composer install
+    composer require --dev naoki-tsuchiya/yii-route-list
 
-## Available Commands
+## Usage
 
-    composer test              // Run unit test
-    composer tests             // Test and quality checks
-    composer cs-fix            // Fix the coding style
-    composer sa                // Run static analysys tools
-    composer run-script --list // List all commands
+```php
+<?php
+
+use NaokiTsuchiya\YiiRouteList\YiiRouteList;
+
+define('YII_ENABLE_EXCEPTION_HANDLER', false);
+define('YII_ENABLE_ERROR_HANDLER', false);
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/yiisoft/yii/framework/yii.php';
+
+// Your Yii application config
+$config = dirname(__FILE__).'/protected/config/main.php';
+
+$app = Yii::createWebApplication($config)
+
+$routeList = (new YiiRouteList())($app);
+
+foreach ($routeList as $route) {
+    var_dump($route->rule);
+    var_dump($route->controller);
+    var_dump($route->action);
+}
+```
