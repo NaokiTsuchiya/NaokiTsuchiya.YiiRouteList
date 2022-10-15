@@ -41,7 +41,7 @@ final class UrlRuleListTest extends TestCase
                         ],
                     ],
                 ],
-            ]
+            ],
         );
         $urlManager = $app->getUrlManager();
         $rules = ($this->urlRuleList)($urlManager);
@@ -65,7 +65,7 @@ final class UrlRuleListTest extends TestCase
                         ],
                     ],
                 ],
-            ]
+            ],
         );
         $urlManager = $app->getUrlManager();
         assert($urlManager instanceof ExtendUrlManager);
@@ -90,7 +90,7 @@ final class UrlRuleListTest extends TestCase
                         ],
                     ],
                 ],
-            ]
+            ],
         );
         $urlManager = $app->getUrlManager();
         assert($urlManager instanceof ExtendExtendUrlManager);
