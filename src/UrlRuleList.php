@@ -24,9 +24,7 @@ final class UrlRuleList
         return $rules;
     }
 
-    /**
-     * @param ReflectionClass<object> $reflectionClass
-     */
+    /** @param ReflectionClass<object> $reflectionClass */
     private function getRulesProperty(ReflectionClass $reflectionClass): ReflectionProperty
     {
         if ($reflectionClass->hasProperty('_rules')) {
